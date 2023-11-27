@@ -1,0 +1,625 @@
+.header {
+    padding: 6rem 0.7rem 0 0.7rem;
+    text-align: center;
+    background-image: url();
+
+    @include media(">=tablet") {
+        padding: 6rem 4rem 0 4rem;
+    }
+
+    &__intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        gap: 4px;
+        @include calculateRem(14);
+        font-weight: 400;
+        color: $col-lightgrey;
+        background-color: #2c2b2b;
+        border: 1px solid $col-grey;
+        padding: 0.2rem 0;
+        width: 12rem;
+        border-radius: 1rem;
+
+        span img {
+            margin-top: 3px;
+        }
+    }
+
+    &__title {
+        @include calculateRem(40);
+        font-weight: 400;
+        padding: 1rem 0;
+
+        @include media(">=desktop") {
+            @include calculateRem(96);
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    &__subtitle {
+        @include calculateRem(16);
+        color: #bdbdbd;
+        padding-bottom: 1rem;
+
+        @include media(">=desktop") {
+            @include calculateRem(24);
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    .get__started {
+        color: $col-white;
+        background-color: $col-green;
+        border: none;
+        border-radius: 2rem;
+        width: 10rem;
+        transition: border-radius 0.2s ease-out;
+        overflow: hidden;
+
+        &-container {
+            display: flex;
+            white-space: nowrap;
+
+            span {
+                @include calculateRem(16);
+                padding: 1rem 2rem;
+                font-weight: 600;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.hero {
+    padding: 4rem 0.7rem 0 0.7rem;
+
+    @include media(">=tablet") {
+        padding: 4rem 3rem 0 3rem;
+    }
+
+    &__img-container {
+        img {
+            border-radius: 0.4rem;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    h1 {
+        text-transform: uppercase;
+        @include calculateRem(16);
+        color: #bdbdbd;
+        text-align: center;
+        font-weight: 500;
+        padding-top: 3rem;
+        padding-bottom: 1.8rem;
+
+        @include media(">desktop") {
+            @include calculateRem(20);
+        }
+    }
+
+    &__company-icons {
+        overflow: hidden;
+        .marquee {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+            white-space: nowrap;
+            animation: marquee 6s infinite linear;
+
+            @include media(">=tablet") {
+                justify-content: space-between;
+                gap: unset;
+                animation: none;
+            }
+            img {
+                width: 5rem;
+            }
+            @keyframes marquee {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+        }
+
+        @include media(">=desktop") {
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.financial__journey-container {
+    padding: 4rem 0.7rem 0 0.7rem;
+
+    @include media(">=tablet") {
+        padding: 4rem 2rem 0 2rem;
+    }
+
+    .financial__journey-header {
+        text-align: center;
+
+        h1 {
+            @include calculateRem(36);
+            font-weight: 400;
+
+            @include media(">=desktop") {
+                @include calculateRem(76);
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+
+        p {
+            @include calculateRem(16);
+            font-weight: 400;
+            line-height: 1.3rem;
+            color: $col-sgrey;
+            padding-top: 1.5rem;
+
+            @include media(">=desktop") {
+                @include calculateRem(20);
+                width: 55%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.section3 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 0.7rem 0 0.7rem;
+
+    @include media(">=tablet") {
+        padding: 4rem 4rem 0 4rem;
+    }
+
+    @include media(">=desktop") {
+        padding: 4rem 3rem 0 3rem;
+    }
+
+    .section3A {
+        display: grid;
+        gap: 1.5rem;
+        @include media(">=desktop") {
+            grid-template-columns: 60% 37%;
+        }
+
+        .payment__card-container {
+            background-color: #131313;
+            padding: 1rem 0;
+            border-radius: 0.5rem;
+            position: relative;
+            overflow: hidden;
+
+            .payment__dsgn {
+                display: flex;
+                flex-direction: column;
+                gap: 5rem;
+
+                .payment__dsgn-mobile {
+                    display: block;
+                    position: absolute;
+                    left: -1rem;
+                    top: -4.2rem;
+
+                    @include media(">=tablet") {
+                        display: none;
+                    }
+                }
+
+                .payment__dsgn-desktop {
+                    display: none;
+                    @include media(">=tablet") {
+                        display: block;
+                        position: absolute;
+                        left: -1rem;
+                        top: -4.2rem;
+                    }
+                }
+
+                .payment__container {
+                    z-index: 50;
+                    .payment1 {
+                        margin: 0 auto;
+                        display: block;
+
+                        @include media(">=tablet") {
+                            display: none;
+                        }
+                    }
+
+                    .payment2 {
+                        display: none;
+                        @include media(">=tablet") {
+                            display: flex;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+
+            .payment__card-text {
+                margin-top: 1rem;
+                padding: 0 0.8rem;
+
+                @include media(">=tablet") {
+                    max-width: 30rem;
+                    padding: 0 2rem 2rem 2rem;
+                }
+
+                .payment__card-title {
+                    color: $col-white;
+                    @include calculateRem(24);
+                    font-weight: 500;
+                    padding-bottom: 0.8rem;
+
+                    @include media(">=desktop") {
+                        @include calculateRem(32);
+                    }
+                }
+
+                .payment__card-subtitle {
+                    color: #bdbdbd;
+                    @include calculateRem(16);
+                    line-height: 1.3rem;
+                }
+            }
+        }
+    }
+
+    .investing__card-container {
+        background-color: #131313;
+        padding: 1rem 0;
+        border-radius: 0.5rem;
+        position: relative;
+        overflow: hidden;
+
+        .investment {
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+
+            .investment1 {
+                display: none;
+
+                @include media("<tablet") {
+                    display: block;
+
+                    position: absolute;
+                    left: -1rem;
+                    top: -4.2rem;
+                }
+            }
+
+            .investment2 {
+                display: none;
+                @include media(">=tablet") {
+                    display: block;
+                    top: -5.5rem;
+                    left: -5.9rem;
+                    position: absolute;
+                }
+            }
+
+            .investment__card-cont {
+                display: flex;
+                justify-content: flex-end;
+                .investment__card1 {
+                    top: 2rem;
+                    display: none;
+                    z-index: 50;
+
+                    @include media("<tablet") {
+                        display: block;
+                    }
+                }
+
+                .investment__card2 {
+                    display: none;
+
+                    @include media(">=tablet") {
+                        display: flex;
+                        justify-content: flex-end;
+                        z-index: 50;
+                    }
+                }
+            }
+
+            .investing__card-text {
+                margin-top: 1rem;
+                padding: 0 1rem;
+
+                @include media(">=tablet") {
+                    max-width: 26rem;
+                    padding: 0 2rem 2rem 2rem;
+                }
+
+                .investing__card-title {
+                    color: $col-white;
+                    @include calculateRem(24);
+                    font-weight: 500;
+                    padding-bottom: 0.8rem;
+                }
+
+                .investing__card-subtitle {
+                    color: #bdbdbd;
+                    @include calculateRem(16);
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .section3B {
+        display: grid;
+        gap: 1.5rem;
+        @include media(">=desktop") {
+            grid-template-columns: 43% 54%;
+        }
+
+        .management__card-container {
+            background-color: #131313;
+            padding: 1rem 0;
+            border-radius: 0.5rem;
+            position: relative;
+            overflow: hidden;
+
+            .management {
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                gap: 5rem;
+
+                .management__card-mobile {
+                    display: block;
+                    position: absolute;
+                    left: -1rem;
+                    @include media(">=tablet") {
+                        display: none;
+                    }
+                }
+
+                .management__card-desktop {
+                    display: none;
+                    @include media(">=tablet") {
+                        display: block;
+                        position: absolute;
+                        overflow: hidden;
+                        top: -8rem;
+                    }
+                }
+
+                .management__card-cont {
+                    z-index: 50;
+
+                    .management__card1 {
+                        display: block;
+                        margin: 0 auto;
+
+                        @include media(">=tablet") {
+                            display: none;
+                        }
+                    }
+                    .management__card2 {
+                        display: none;
+                        @include media(">=tablet") {
+                            display: flex;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+
+                .management__card-text {
+                    margin-top: 1rem;
+                    padding: 0 1rem;
+
+                    @include media(">=tablet") {
+                        max-width: 27rem;
+                        padding: 0 2rem 2rem 2rem;
+                    }
+
+                    .management__card-title {
+                        color: $col-white;
+                        @include calculateRem(24);
+                        font-weight: 500;
+                        padding-bottom: 0.8rem;
+                    }
+
+                    .management__card-subtitle {
+                        color: #bdbdbd;
+                        @include calculateRem(16);
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .financial__card-container {
+            background-color: #131313;
+            position: relative;
+            padding: 1rem 0.5rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+
+            .financial {
+                display: flex;
+                flex-direction: column;
+                gap: 5rem;
+
+                .financial__mobile {
+                    display: block;
+                    position: absolute;
+                    left: -1rem;
+                    @include media(">=tablet") {
+                        display: none;
+                    }
+                }
+
+                .financial__desktop {
+                    display: none;
+                    @include media(">=tablet") {
+                        display: block;
+                        position: absolute;
+                        overflow: hidden;
+                        top: -8rem;
+                    }
+                }
+
+                .financial__card-cont {
+                    z-index: 50;
+                    .financial__card1 {
+                        display: block;
+                        margin: 0 auto;
+
+                        @include media(">=tablet") {
+                            display: none;
+                        }
+                    }
+
+                    .financial__card2 {
+                        display: none;
+                        @include media(">=tablet") {
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+
+                .financial__card-text {
+                    margin-top: 2rem;
+                    @include media(">=tablet") {
+                        max-width: 36rem;
+                        padding: 0 2rem 2rem 2rem;
+                    }
+
+                    .financial__card-title {
+                        color: $col-white;
+                        @include calculateRem(24);
+                        font-weight: 500;
+                        padding-bottom: 0.8rem;
+                    }
+
+                    .financial__card-subtitle {
+                        color: #bdbdbd;
+                        @include calculateRem(16);
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section4 {
+    padding: 4rem 0.7rem 0 0.7rem;
+
+    @include media(">=tablet") {
+        padding: 4rem 2rem 0 2rem;
+    }
+
+    @include media(">=desktop") {
+        padding: 4rem 3rem 0 3rem;
+    }
+
+    .freedom__container {
+        text-align: center;
+
+        h1 {
+            @include calculateRem(36);
+            font-weight: 400;
+
+            @include media(">=desktop") {
+                @include calculateRem(76);
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+
+        p {
+            @include calculateRem(16);
+            font-weight: 400;
+            line-height: 1.5rem;
+            color: $col-sgrey;
+            padding-top: 1rem;
+            padding-bottom: 2.5rem;
+
+            @include media(">=desktop") {
+                @include calculateRem(20);
+                width: 55%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .section4__img {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .section4__text {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 4rem;
+        padding-bottom: 5rem;
+
+        @include media(">=desktop") {
+            flex-direction: row;
+        }
+
+        .text__container {
+            .text__header {
+                display: flex;
+                gap: 0.8rem;
+                align-items: center;
+                padding-bottom: 0.5rem;
+
+                h4 {
+                    @include calculateRem(20);
+                    font-weight: 500;
+                }
+            }
+
+            p {
+                @include calculateRem(16);
+                font-weight: 400;
+                color: #bdbdbd;
+                line-height: 1.5rem;
+            }
+        }
+    }
+}
+
+.section5 {
+    overflow: unset;
+    h1 {
+        @include calculateRem(55);
+        background-color: #48d64c;
+        font-weight: 400;
+        color: $col-black;
+        padding: 3rem 0.7rem;
+
+        @include media(">=desktop") {
+            @include calculateRem(128);
+            padding: 3rem 2rem;
+        }
+    }
+}

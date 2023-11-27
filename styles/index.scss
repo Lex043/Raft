@@ -1,0 +1,11 @@
+@import "./utils/breakpoints";
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/global";
+
+@import "./pages/homepage";
+@import "./pages/navbar";
+@import "./pages/secondSection";

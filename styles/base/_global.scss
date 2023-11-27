@@ -1,0 +1,30 @@
+body {
+    font-family: "SF Pro Display", sans-serif;
+    min-height: 100vh;
+    background: $col-black;
+    color: $col-white;
+    overflow-x: hidden;
+}
+
+//hide scroll bar for chrome, safari and opera
+
+body::-webkit-scrollbar {
+    @include media(">=desktop") {
+        display: none;
+    }
+}
+
+//hide scroll bar for firefox
+
+html {
+    @include media(">=desktop") {
+        scrollbar-width: none;
+    }
+}
+
+//hide scroll bar for edge, IE
+body {
+    @include media(">=desktop") {
+        -ms-overflow-style: none;
+    }
+}

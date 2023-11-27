@@ -1,0 +1,156 @@
+.navbar__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0.7rem;
+    border-bottom: 0.1rem solid $col-grey;
+
+    @include media(">=tablet") {
+        padding: 0.8rem 3rem;
+    }
+    .logo__container {
+        display: flex;
+        align-items: center;
+        gap: 0.1rem;
+        img {
+            object-fit: cover;
+            width: 1.8rem;
+        }
+        p {
+            @include calculateRem(24);
+        }
+    }
+
+    .navbar__container {
+        .hamburger__btn {
+            @include calculateRem(20);
+            cursor: pointer;
+            user-select: none;
+            border: none;
+            background-color: unset;
+            color: $col-white;
+
+            @include media(">=tablet") {
+                display: none;
+            }
+        }
+        .navbar {
+            display: none;
+            margin-left: 2rem;
+            @include media(">=tablet") {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .list__container {
+                display: flex;
+                gap: 1.8rem;
+                @include calculateRem(15);
+                font-weight: 500;
+
+                a {
+                    color: $col-sgrey;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .login__container {
+        display: none;
+        gap: 1rem;
+        align-items: center;
+
+        @include media(">=tablet") {
+            display: flex;
+        }
+
+        .login__btn {
+            background-color: transparent;
+            padding: 5px 8px;
+            @include calculateRem(16);
+            font-weight: 600;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .nav__get-started {
+            border-radius: 1.5rem;
+            width: 7rem;
+            background-color: $col-green;
+            overflow: hidden;
+            border: none;
+
+            &-container {
+                display: flex;
+                white-space: nowrap;
+
+                span {
+                    @include calculateRem(14);
+                    color: $col-white;
+                    font-weight: $col-green;
+                    display: block;
+                    padding: 0.6rem 0.8rem;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.mobile__navbar__cont {
+    display: none;
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+        @include calculateRem(32);
+        padding-right: 1rem;
+        position: relative;
+        top: 1.2rem;
+        align-self: self-end;
+    }
+    .mobile__navbar {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 12px 0 12px 12px;
+
+        a {
+            width: 100%;
+            padding: 6px 0;
+            text-align: start;
+            @include calculateRem(16);
+        }
+
+        .mobile__login__btn {
+            background-color: transparent;
+            padding: 5px 8px;
+            width: fit-content;
+            margin-top: 12px;
+            margin-bottom: 16px;
+            text-align: start;
+            @include calculateRem(16);
+        }
+
+        .mobile__learn__for__free {
+            border: none;
+            color: #fff;
+            padding: 7px 8px;
+            border-radius: 3px;
+            text-align: start;
+            width: fit-content;
+            @include calculateRem(16);
+        }
+    }
+}
