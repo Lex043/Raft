@@ -4,10 +4,35 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Raft</title>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/splitting/dist/splitting.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/splitting/dist/splitting-cells.css"
+        />
         <link rel="stylesheet" href="./styles/index.css" />
     </head>
     <body>
         <main>
+            <div class="preloader">
+                <svg
+                    class="logo2"
+                    width="141"
+                    height="141"
+                    viewBox="0 0 141 141"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M119.479 60.8037C114.176 33.718 87.8892 16.0394 60.8035 21.3426C33.7178 26.6458 16.0392 52.9324 21.3424 80.0181C26.6456 107.104 52.9322 124.782 80.0179 119.479C107.104 114.176 124.782 87.8894 119.479 60.8037ZM97.657 93.2513L52.3595 62.7873L55.2609 77.6059C55.6548 79.6177 54.3131 81.6127 52.3013 82.0066C50.2895 82.4005 48.2945 81.0588 47.9006 79.047L43.2604 55.347C42.8665 53.3352 44.2081 51.3402 46.2199 50.9463L69.92 46.306C71.9318 45.9121 73.9267 47.2538 74.3206 49.2656C74.7145 51.2774 73.3728 53.2724 71.361 53.6663L56.5424 56.5677L101.84 87.0317C102.72 87.6236 103.246 88.4886 103.429 89.4209C103.611 90.3532 103.45 91.3528 102.858 92.2329C101.714 93.9345 99.3586 94.3956 97.657 93.2513Z"
+                        fill="white"
+                    />
+                </svg>
+
+                <h1>Raft</h1>
+            </div>
             <section class="navbar__section">
                 <div class="logo__container">
                     <img src="./assets/raft-logo.png" alt="logo" />
@@ -84,27 +109,23 @@
                     <a href="#">Learn</a>
                     <a href="#">About</a>
 
-                    <h2 class="mobile__login__btn">Login</h2>
-                    <button class="mobile__learn__for__free">
+                    <h3 class="mobile__login__btn">Login</h3>
+                    <button class="mobile__get-started">
                         Get Started
                     </button>
                 </nav>
             </section>
 
             <header class="header">
-                <!-- <span>
-                    
-                </span> -->
-
                 <h3 class="header__intro">
                     Introducing Raft Cards
                     <span><img src="./assets/chevron-right.png" alt="" /></span>
                 </h3>
                 <h1 class="header__title">Building the future of banking.</h1>
-                <div class="header__subtitle">
+                <p class="header__subtitle">
                     Experience the future of banking with RAFT. We're here to
                     empower your financial journey.
-                </div>
+                </p>
                 <button class="get__started">
                     <div class="get__started-container">
                         <span class="get-started-span">Get Started</span>
@@ -152,8 +173,10 @@
             <!-- section 2 -->
             <section class="financial__journey-container">
                 <header class="financial__journey-header">
-                    <h1>Elevate Your Financial Journey with RAFT</h1>
-                    <p>
+                    <h1 data-splitting="chars">
+                        Elevate Your Financial Journey with RAFT
+                    </h1>
+                    <p data-splitting="chars">
                         RAFT offers a world of financial possibilities. From
                         investments to payments, we've got you covered. Join us
                         and unlock your financial potential today.
@@ -1947,8 +1970,10 @@
             <!-- section 4 -->
             <section class="section4">
                 <header class="freedom__container">
-                    <h1>Your Financial Freedom, Your Way</h1>
-                    <p>
+                    <h1 data-splitting="chars">
+                        Your Financial Freedom, Your Way
+                    </h1>
+                    <p data-splitting="words">
                         We believe that managing your finances should be
                         effortless and cost-effective. That's why we offer you
                         the freedom you deserve
@@ -2059,7 +2084,7 @@
 
             <!-- section5 -->
             <section class="section5">
-                <h1>
+                <h1 data-splitting="chars">
                     Smart investments, secure payments, and expert guidance, all
                     in one place.
                 </h1>
@@ -2073,7 +2098,7 @@
                     <h1>Confidently Shape Your Financial Future</h1>
                     <p>
                         At RAFT, we empower you to confidently shape your
-                        financial future.Our modern approach simplifies saving
+                        financial future. Our modern approach simplifies saving
                         and investing, making it easier than ever.
                     </p>
                 </div>
@@ -2359,7 +2384,7 @@
                 <header class="section8__text">
                     <h4>Introducing</h4>
                     <h1>Introducing RAFT's Next-Gen Cards</h1>
-                    <p>
+                    <p data-splitting="words">
                         Discover RAFT's latest innovation – our new cards.
                         Elevate your banking experience with cutting-edge
                         features, security, and unprecedented convenience.
@@ -2692,25 +2717,76 @@
                 <h1>Join over 3 million memebers</h1>
 
                 <div class="section9__text">
-                    <p>
-                        RAFT has transformed my approach to finance. Their smart
-                        investing options have helped me grow my wealth, and
-                        their user-friendly platform makes managing my money a
-                        breeze. I've never felt more confident about my
-                        financial future.
-                    </p>
-                    <div class="feedback">
-                        <div class="user__feedback">
-                            <h4>Robert Fox</h4>
-                            <h5>Happy RAFT User</h5>
+                    <section class="feedback__container">
+                        <div class="feedback1">
+                            <p>
+                                RAFT has transformed my approach to finance.
+                                Their smart investing options have helped me
+                                grow my wealth, and their user-friendly platform
+                                makes managing my money a breeze. I've never
+                                felt more confident about my financial future.
+                            </p>
+                            <div class="feedback">
+                                <div class="user__feedback">
+                                    <h4>Robert Fox</h4>
+                                    <h5>Happy RAFT User</h5>
+                                </div>
+                                <div class="user__img">
+                                    <img
+                                        src="./assets/Frame 127.png"
+                                        alt="user image"
+                                    />
+                                </div>
+                            </div>
                         </div>
-                        <div class="user__img">
-                            <img
-                                src="./assets/Frame 127.png"
-                                alt="user image"
-                            />
+
+                        <div class="feedback2">
+                            <p>
+                                I can't express how grateful I am to RAFT. Their
+                                wealth management services have been a
+                                game-changer for my family's financial security.
+                                The expert guidance and personalized strategies
+                                have given us peace of mind, knowing that our
+                                future is in capable hands.
+                            </p>
+
+                            <div class="feedback">
+                                <div class="user__feedback">
+                                    <h4>Cameron Williamson</h4>
+                                    <h5>Happy RAFT User</h5>
+                                </div>
+                                <div class="user__img">
+                                    <img
+                                        src="./assets/Frame 130.png"
+                                        alt="user image"
+                                    />
+                                </div>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="feedback3">
+                            <p>
+                                RAFT's financial planning services have been a
+                                lifeline for me. I always struggled with
+                                managing my money, but their team crafted a
+                                tailored plan that addressed my goals and
+                                concerns. It's been a game-changer in achieving
+                                my financial dreams
+                            </p>
+                            <div class="feedback">
+                                <div class="user__feedback">
+                                    <h4>Esther Howard</h4>
+                                    <h5>Happy RAFT User</h5>
+                                </div>
+                                <div class="user__img">
+                                    <img
+                                        src="./assets/Frame 136.png"
+                                        alt="user image"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                     <div class="arrow__container">
                         <div class="arrow__left">
@@ -3048,6 +3124,14 @@
                 crossorigin="anonymous"
                 referrerpolicy="no-referrer"
             ></script>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+                integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer"
+            ></script>
+            <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.28/bundled/lenis.min.js"></script>
+            <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
             <script src="./app.js"></script>
         </main>
     </body>

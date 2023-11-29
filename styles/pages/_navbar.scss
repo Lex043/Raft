@@ -45,12 +45,12 @@
 
             .list__container {
                 display: flex;
-                gap: 1.8rem;
+                gap: 3rem;
                 @include calculateRem(15);
                 font-weight: 500;
 
                 a {
-                    color: $col-sgrey;
+                    color: #bdbdbd;
                     font-weight: 400;
                 }
             }
@@ -108,7 +108,8 @@
     display: none;
     position: absolute;
     top: 0;
-    background-color: #fff;
+    background-color: $col-black;
+    z-index: 50;
     width: 100%;
     flex-direction: column;
     justify-content: center;
@@ -117,7 +118,7 @@
         @include calculateRem(32);
         padding-right: 1rem;
         position: relative;
-        top: 1.2rem;
+        top: 0.5rem;
         align-self: self-end;
     }
     .mobile__navbar {
@@ -130,12 +131,12 @@
             width: 100%;
             padding: 6px 0;
             text-align: start;
+            color: $col-white;
             @include calculateRem(16);
         }
 
         .mobile__login__btn {
             background-color: transparent;
-            padding: 5px 8px;
             width: fit-content;
             margin-top: 12px;
             margin-bottom: 16px;
@@ -143,12 +144,13 @@
             @include calculateRem(16);
         }
 
-        .mobile__learn__for__free {
+        .mobile__get-started {
             border: none;
-            color: #fff;
+            background-color: $col-green;
             padding: 7px 8px;
             border-radius: 3px;
             text-align: start;
+            color: $col-white;
             width: fit-content;
             @include calculateRem(16);
         }

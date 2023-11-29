@@ -4,3 +4,7 @@ $col-sgrey: #989898;
 $col-black: #070606;
 $col-grey: #3d3d3d;
 $col-lightgrey: #dcdcdc;
+
+.visible {
+    display: flex !important;
+}
