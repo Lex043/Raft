@@ -77,10 +77,10 @@
 }
 
 .hero {
-    padding: 4rem 0.7rem 0 0.7rem;
+    padding: 4rem 0.7rem 0;
 
     @include media(">=tablet") {
-        padding: 4rem 3rem 0 3rem;
+        padding: 4rem 3rem 0;
     }
 
     &__img-container {
@@ -141,7 +141,7 @@
 }
 
 .financial__journey-container {
-    padding: 4rem 0.7rem 0 0.7rem;
+    padding: 4rem 0.7rem 0;
 
     @include media(">=tablet") {
         padding: 4rem 2rem 0 2rem;
@@ -191,14 +191,14 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 4rem 0.7rem 0 0.7rem;
+    padding: 4rem 0.7rem 0;
 
     @include media(">=tablet") {
-        padding: 4rem 4rem 0 4rem;
+        padding: 4rem 4rem 0;
     }
 
     @include media(">=desktop") {
-        padding: 4rem 3rem 0 3rem;
+        padding: 4rem 3rem 0;
     }
 
     .section3A {
@@ -272,7 +272,7 @@
 
                 @include media(">=tablet") {
                     max-width: 30rem;
-                    padding: 0 2rem 2rem 2rem;
+                    padding: 0 2rem 2rem;
                 }
 
                 .payment__card-title {
@@ -363,7 +363,7 @@
 
                 @include media(">=tablet") {
                     max-width: 26rem;
-                    padding: 0 2rem 2rem 2rem;
+                    padding: 0 2rem 2rem;
                 }
 
                 .investing__card-title {
@@ -451,7 +451,7 @@
 
                     @include media(">=tablet") {
                         max-width: 27rem;
-                        padding: 0 2rem 2rem 2rem;
+                        padding: 0 2rem 2rem;
                     }
 
                     .management__card-title {
@@ -529,7 +529,7 @@
                     margin-top: 2rem;
                     @include media(">=tablet") {
                         max-width: 36rem;
-                        padding: 0 2rem 2rem 2rem;
+                        padding: 0 2rem 2rem;
                     }
 
                     .financial__card-title {
@@ -558,7 +558,7 @@
     }
 
     @include media(">=desktop") {
-        padding: 4rem 3rem 0 3rem;
+        padding: 4rem 3rem 0;
     }
 
     .freedom__container {
