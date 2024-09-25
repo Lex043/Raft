@@ -1,4 +1,6 @@
 .header {
+    max-width: 1400px;
+    margin: 0 auto;
     padding: 6rem 0.7rem 0 0.7rem;
     text-align: center;
 
@@ -78,6 +80,8 @@
 
 .hero {
     padding: 4rem 0.7rem 0;
+    max-width: 1400px;
+    margin: 0 auto;
 
     @include media(">=tablet") {
         padding: 4rem 3rem 0;
@@ -142,6 +146,8 @@
 
 .financial__journey-container {
     padding: 4rem 0.7rem 0;
+    max-width: 1400px;
+    margin: 0 auto;
 
     @include media(">=tablet") {
         padding: 4rem 2rem 0 2rem;
@@ -192,6 +198,8 @@
     flex-direction: column;
     gap: 2rem;
     padding: 4rem 0.7rem 0;
+    max-width: 1400px;
+    margin: 0 auto;
 
     @include media(">=tablet") {
         padding: 4rem 4rem 0;
@@ -552,6 +560,8 @@
 
 .section4 {
     padding: 4rem 0.7rem 0 0.7rem;
+    max-width: 1400px;
+    margin: 0 auto;
 
     @include media(">=tablet") {
         padding: 4rem 2rem 0 2rem;
@@ -641,22 +651,28 @@
     }
 }
 
-.section5 {
-    overflow: unset;
-    h1 {
-        @include calculateRem(55);
-        background-color: #48d64c;
-        font-weight: 400;
-        color: $col-black;
-        padding: 3rem 0.7rem;
+.section5__container {
+    background-color: #48d64c;
 
-        @include media(">=desktop") {
-            @include calculateRem(128);
-            padding: 3rem 2rem;
-        }
+    .section5 {
+        overflow: unset;
+        max-width: 1400px;
+        margin: 0 auto;
+        h1 {
+            @include calculateRem(55);
 
-        .char {
-            opacity: 0;
+            font-weight: 400;
+            color: $col-black;
+            padding: 3rem 0.7rem;
+
+            @include media(">=desktop") {
+                @include calculateRem(128);
+                padding: 3rem 2rem;
+            }
+
+            .char {
+                opacity: 0;
+            }
         }
     }
 }

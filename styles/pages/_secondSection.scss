@@ -1,5 +1,7 @@
 .section6 {
     padding: 4rem 0.7rem 0;
+    max-width: 1400px;
+    margin: 0 auto;
 
     @include media(">=tablet") {
         padding: 4rem 4rem 0;
@@ -206,6 +208,8 @@
 }
 
 .section7 {
+    max-width: 1400px;
+    margin: 0 auto;
     .summary {
         padding: 4rem 0.7rem;
         display: flex;
@@ -253,6 +257,8 @@
 
 .section8 {
     padding: 4rem 0.7rem;
+    max-width: 1400px;
+    margin: 0 auto;
 
     @include media(">=tablet") {
         padding: 4rem 4rem;
@@ -345,120 +351,124 @@
     }
 }
 
-.section9 {
+.section9__container {
     background-color: #48d64c;
-    padding: 4rem 2rem 2rem;
+    .section9 {
+        padding: 4rem 2rem 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
 
-    h1 {
-        color: #070606;
-        @include calculateRem(32);
-        font-weight: 400;
-        text-align: center;
-        padding-bottom: 3rem;
+        h1 {
+            color: #070606;
+            @include calculateRem(32);
+            font-weight: 400;
+            text-align: center;
+            padding-bottom: 3rem;
 
-        @include media(">=tablet") {
-            @include calculateRem(76);
-            max-width: 38rem;
-            margin: 0 auto;
-        }
-    }
-
-    .section9__text {
-        .feedback__container {
-            display: flex;
-            gap: 2rem;
-            overflow-y: scroll;
-
-            &::-webkit-scrollbar {
-                display: none;
+            @include media(">=tablet") {
+                @include calculateRem(76);
+                max-width: 38rem;
+                margin: 0 auto;
             }
-            .feedback1,
-            .feedback2,
-            .feedback3 {
+        }
+
+        .section9__text {
+            .feedback__container {
                 display: flex;
-                flex-direction: column;
                 gap: 2rem;
-                flex-shrink: 0;
-                width: 20rem;
+                overflow-y: scroll;
 
-                @include media(">=tablet") {
-                    border-left: 2px solid $col-black;
-                    padding-left: 1rem;
+                &::-webkit-scrollbar {
+                    display: none;
                 }
+                .feedback1,
+                .feedback2,
+                .feedback3 {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    flex-shrink: 0;
+                    width: 20rem;
 
-                @include media(">=desktop") {
-                    width: 27rem;
-                }
-
-                p {
-                    color: #292929;
-                    line-height: 1.8rem;
-                    @include calculateRem(16);
+                    @include media(">=tablet") {
+                        border-left: 2px solid $col-black;
+                        padding-left: 1rem;
+                    }
 
                     @include media(">=desktop") {
-                        @include calculateRem(24);
-                        line-height: 2.5rem;
+                        width: 27rem;
                     }
-                }
-            }
 
-            .feedback {
-                display: flex;
-                justify-content: space-between;
-                margin-top: auto;
-
-                .user__feedback {
-                    h4 {
-                        color: #070606;
-                        padding-bottom: 0.2rem;
-                        font-weight: 500;
-                        @include calculateRem(20);
+                    p {
+                        color: #292929;
+                        line-height: 1.8rem;
+                        @include calculateRem(16);
 
                         @include media(">=desktop") {
                             @include calculateRem(24);
-                        }
-                    }
-
-                    h5 {
-                        color: #292929;
-                        @include media(">=desktop") {
-                            @include calculateRem(14);
+                            line-height: 2.5rem;
                         }
                     }
                 }
-            }
 
-            .user__img {
-                img {
-                    width: 2.5rem;
+                .feedback {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: auto;
 
-                    @include media(">=desktop") {
-                        width: 4rem;
+                    .user__feedback {
+                        h4 {
+                            color: #070606;
+                            padding-bottom: 0.2rem;
+                            font-weight: 500;
+                            @include calculateRem(20);
+
+                            @include media(">=desktop") {
+                                @include calculateRem(24);
+                            }
+                        }
+
+                        h5 {
+                            color: #292929;
+                            @include media(">=desktop") {
+                                @include calculateRem(14);
+                            }
+                        }
+                    }
+                }
+
+                .user__img {
+                    img {
+                        width: 2.5rem;
+
+                        @include media(">=desktop") {
+                            width: 4rem;
+                        }
                     }
                 }
             }
         }
-    }
 
-    .arrow__container {
-        display: flex;
-        justify-content: flex-end;
-        margin-top: 4rem;
-        gap: 1rem;
-
-        .arrow__left,
-        .arrow__right {
-            background-color: $col-white;
-            border-radius: 100%;
+        .arrow__container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 2.5rem;
-            height: 2.5rem;
-            border: 0.1rem solid #0f172a;
+            justify-content: flex-end;
+            margin-top: 4rem;
+            gap: 1rem;
 
-            &:hover {
-                cursor: pointer;
+            .arrow__left,
+            .arrow__right {
+                background-color: $col-white;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2.5rem;
+                height: 2.5rem;
+                border: 0.1rem solid #0f172a;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -466,6 +476,8 @@
 
 .faq {
     padding: 4rem 0.7rem;
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -503,35 +515,39 @@
 
 // logo section
 
-.logo__section {
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
-    padding-bottom: 1.7rem;
+.logo__section__container {
     border-bottom: 0.1rem solid #3d3d3d;
+    .logo__section {
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        padding-bottom: 1.7rem;
 
-    max-width: 95%;
-    margin: 0 auto;
+        // max-width: 95%;
+        // margin: 0 auto;
+        max-width: 1400px;
+        margin: 0 auto;
 
-    .logo1 {
-        @include media(">=desktop") {
+        .logo1 {
+            @include media(">=desktop") {
+                display: none;
+            }
+        }
+
+        .logo2 {
             display: none;
+            @include media(">=desktop") {
+                display: block;
+            }
         }
-    }
 
-    .logo2 {
-        display: none;
-        @include media(">=desktop") {
-            display: block;
-        }
-    }
+        h1 {
+            @include calculateRem(72);
+            font-weight: 400;
 
-    h1 {
-        @include calculateRem(72);
-        font-weight: 400;
-
-        @include media(">=desktop") {
-            @include calculateRem(128);
+            @include media(">=desktop") {
+                @include calculateRem(128);
+            }
         }
     }
 }
@@ -544,6 +560,8 @@ footer {
 
     @include media(">=tablet") {
         padding: 4rem 2rem 1rem;
+        max-width: 1400px;
+        margin: 0 auto;
     }
 
     .scan__container {

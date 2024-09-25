@@ -1,104 +1,109 @@
-.navbar__section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.8rem 0.7rem;
+.navbar_border {
     border-bottom: 0.1rem solid $col-grey;
 
-    @include media(">=tablet") {
-        padding: 0.8rem 3rem;
-    }
-    .logo__container {
+    .navbar__section {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 0.1rem;
-        img {
-            object-fit: cover;
-            width: 1.8rem;
-        }
-        p {
-            @include calculateRem(24);
-        }
-    }
-
-    .navbar__container {
-        .hamburger__btn {
-            @include calculateRem(20);
-            cursor: pointer;
-            user-select: none;
-            border: none;
-            background-color: unset;
-            color: $col-white;
-
-            @include media(">=tablet") {
-                display: none;
-            }
-        }
-        .navbar {
-            display: none;
-            margin-left: 2rem;
-            @include media(">=tablet") {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-            }
-
-            .list__container {
-                display: flex;
-                gap: 3rem;
-                @include calculateRem(15);
-                font-weight: 500;
-
-                a {
-                    color: #bdbdbd;
-                    font-weight: 400;
-                }
-            }
-        }
-    }
-
-    .login__container {
-        display: none;
-        gap: 1rem;
-        align-items: center;
+        padding: 0.8rem 0.7rem;
+        max-width: 1400px;
+        margin: 0 auto;
 
         @include media(">=tablet") {
-            display: flex;
+            padding: 0.8rem 3rem;
         }
-
-        .login__btn {
-            background-color: transparent;
-            padding: 5px 8px;
-            @include calculateRem(16);
-            font-weight: 600;
-
-            &:hover {
-                cursor: pointer;
+        .logo__container {
+            display: flex;
+            align-items: center;
+            gap: 0.1rem;
+            img {
+                object-fit: cover;
+                width: 1.8rem;
+            }
+            p {
+                @include calculateRem(24);
             }
         }
 
-        .nav__get-started {
-            border-radius: 1.5rem;
-            width: 7rem;
-            background-color: $col-green;
-            overflow: hidden;
-            border: none;
+        .navbar__container {
+            .hamburger__btn {
+                @include calculateRem(20);
+                cursor: pointer;
+                user-select: none;
+                border: none;
+                background-color: unset;
+                color: $col-white;
 
-            &-container {
+                @include media(">=tablet") {
+                    display: none;
+                }
+            }
+            .navbar {
+                display: none;
+                margin-left: 2rem;
+                @include media(">=tablet") {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                }
+
+                .list__container {
+                    display: flex;
+                    gap: 3rem;
+                    @include calculateRem(15);
+                    font-weight: 500;
+
+                    a {
+                        color: #bdbdbd;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .login__container {
+            display: none;
+            gap: 1rem;
+            align-items: center;
+
+            @include media(">=tablet") {
                 display: flex;
-                white-space: nowrap;
+            }
 
-                span {
-                    @include calculateRem(14);
-                    color: $col-white;
-                    font-weight: $col-green;
-                    display: block;
-                    padding: 0.6rem 0.8rem;
+            .login__btn {
+                background-color: transparent;
+                padding: 5px 8px;
+                @include calculateRem(16);
+                font-weight: 600;
+
+                &:hover {
+                    cursor: pointer;
                 }
             }
 
-            &:hover {
-                cursor: pointer;
+            .nav__get-started {
+                border-radius: 1.5rem;
+                width: 7rem;
+                background-color: $col-green;
+                overflow: hidden;
+                border: none;
+
+                &-container {
+                    display: flex;
+                    white-space: nowrap;
+
+                    span {
+                        @include calculateRem(14);
+                        color: $col-white;
+                        font-weight: $col-green;
+                        display: block;
+                        padding: 0.6rem 0.8rem;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
